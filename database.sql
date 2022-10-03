@@ -19,8 +19,10 @@ CREATE TABLE
     questions(
         id INT(255) AUTO_INCREMENT NOT NULL,
         question VARCHAR(255) NOT NULL,
-        correct_answer text,
-        answers SET,
+        correct_answer VARCHAR(255) NOT NULL,
+        answer1 VARCHAR(255) NOT NULL,
+        answer2 VARCHAR(255) NOT NULL,
+        answer3 VARCHAR(255) NOT NULL,
         topic_id INT(255) NOT NULL,
         n_correct INT(255) NOT NULL,
         n_incorrect INT(255) NOT NULL,
