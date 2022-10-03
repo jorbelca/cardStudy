@@ -66,7 +66,9 @@ class QuestionController extends Controller
                 'question' => ['required'],
                 'topic_id' => ['required'],
                 'correct_answer' => ['required'],
-                'answers' => ['required']
+                'answer1' => ['required'],
+                'answer2' => ['required'],
+                'answer3' => ['required']
             ]);
 
             if ($validate->fails()) {
@@ -82,7 +84,9 @@ class QuestionController extends Controller
                 $question->topic_id = $params->topic_id;
                 $question->question = $params->question;
                 $question->correct_answer = $params->correct_answer;
-                $question->answers = $params->answers;
+                $question->answer1 = $params->answer1;
+                $question->answer2 = $params->answer2;
+                $question->answer3 = $params->answer3;
                 $question->n_correct = 0;
                 $question->n_incorrect = 0;
 
@@ -124,7 +128,9 @@ class QuestionController extends Controller
             $validate = Validator::make($params_array, [
                 'question' => 'required',
                 'correct_answer' => 'required',
-                'answers' => 'required'
+                'answer1' => 'required',
+                'answer2' => 'required',
+                'answer3' => 'required'
             ]);
 
             if ($validate->fails()) {

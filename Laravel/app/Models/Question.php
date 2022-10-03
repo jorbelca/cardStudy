@@ -10,7 +10,7 @@ class Question extends Model
     use HasFactory;
     protected $table = 'questions';
 
-    protected $fillable = ['question', 'answers', 'topic_id', 'correct_answer'];
+    protected $fillable = ['question', 'answer1', 'answer2', 'answer3', 'topic_id', 'correct_answer'];
     // Relacion de muchos a uno
     public function user()
     {

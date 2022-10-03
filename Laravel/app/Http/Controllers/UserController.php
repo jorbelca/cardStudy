@@ -94,7 +94,7 @@ class UserController extends Controller
         $params = json_decode($json);
         $params_array = json_decode($json, true);
 
-    
+
 
         // Validar datos
         $validate = Validator::make($params_array, [
@@ -116,7 +116,7 @@ class UserController extends Controller
             // Devolver el token o los datos
             $signup = $jwtAuth->signUp($params->email, $password);
             if (!empty($params->getToken)) {
-                $signup = $jwtAuth->signUp($params->email, $password);
+                $signup = $jwtAuth->signUp($params->email, $password, true);
             }
         }
 
